@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<title>CANTEEN</title>
+<head>
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  width:100%;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.navbar a:hover, a:active
+{
+text-decoration:none;
+background-color:red;
+}
+
+.login-box
+{
+float:right;
+text-decoration:none
+}
+
+* {box-sizing:border-box}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: black;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color:red;
+    font-size:30px;
+    
+}
+img
+{
+border:3px solid black;
+}
+
+div.r
+{
+font-size:40px;
+color:black;
+}
+div.heading
+{
+font-size:40px;
+
+color:black;
+}
+red
+{
+color:red;
+}
+food
+{
+font-size:65px;
+}
+
+
+
+</style>
+</head>
+<body style="margin:0px">
+<div class="navbar">
+  <a href="#" >HOME </a>
+    <a href="php/mainmenu.php">MENU</a>
+    <a href="loginoptionsorder.html" >ORDERS</a>
+    <a href="loginstudentres.html">RESERVATIONS</a>
+
+	<div class="login-box">
+    <a href="loginoptions.html">LOGIN</a>
+	<a href="signupoptions.html">SIGN UP</a>
+</div>
+</div>
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+<img src="images/pizza.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">
+<img src="images/chinese.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/coffee.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/cake.jpg" style="width:100%">
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</t>
+</t>
+</t>
+</t>
+
+<div class="heading">
+
+
+<h1 text align="center"> <food><i><u>ABOUT US</u></i></food></h1>
+
+
+	
+<p><img src="images/d1.jpg" width="500" height="370" align="left" hspace="30"/> The K. J. Somaiya College of Engineering, abbreviated as KJSCE, was established in 1983 at Somaiya Vidyavihar.The only zone that attracts the foodie is the <red><b>"CANTEEN"</red></b>.We exhibit great connoisseur in taste.The canteen provides a variety of dishes, starting from light snacks to lunches and drinks.
+It gives us immense pleasure to witness our students enjoy and relish our food items. We assure you great quality and service facilities.</p>
+<h3 text align="center"><red><b>FOOD IS OUR FORTE.PEOPLE ARE OUR PASSION!</red></b></h3>
+
+
+</div>
+
+<h1 text align="center"><food><i><u>FOOD ARCADE</u></i></food></h1>
+<table style="width:100%" >
+
+  <tr>
+    <th><img src="images/pasta.jpg" width="450" height="500" >
+</div>
+	<div class="desc"><b>SPICY</b><br>
+	<div class="r">
+	&#x2605;
+	&#x2605;
+	&#x2605;
+        &#x2605;
+        &#9734;
+ </div>
+</th>
+    <th><img src="images/chocs.jpg" width="450" height="500">
+	<div class="desc"><b>HEAVEN</b><br>
+	<div class="r">
+	&#x2605;
+	&#x2605;
+        &#x2605;
+       &#9734;
+       &#9734;
+ </div>
+  
+</div></th> 
+    <th> <img src="images/orange.jpg" width="450" height="500">
+	<div class="desc"><b>TANGY</b><br>
+	<div class="r">
+	&#x2605;
+ 	&#x2605;
+ &#x2605;
+ &#9734;
+  &#9734;
+ </div>
+  
+</div></th>  </tr>
+	
+	<tr>
+	<th><img src="images/maggimasala.jpg" width="450" height="500">
+	<div class="desc"><b>YUMMY</b><br>
+	<div class="r">
+	&#x2605;
+	&#x2605;
+	&#x2605;
+
+ &#x2605;
+ &#9734;
+ </div>
+  
+</div>
+</th>
+	<th><img src="images/chocolava.jpg" width="450" height="500">
+	<div class="desc"><b>BLISS<b><br>
+	<div class="r">
+	&#x2605;
+	&#x2605;
+	&#x2605;
+
+ &#x2605;
+ &#9734;
+ </div>
+  
+</div></th>
+	<th><img src="images/pani.jpg" width="450" height="500">
+	<div class="desc"><b>CHATPATTA</b><br>
+	<div class="r">
+	&#x2605;
+	&#x2605;
+	&#x2605;
+	&#x2605;
+ 
+ &#9734;
+ </div>
+  
+</div></th>
+	</tr>
+	</div>
+	
+  </table>
+  
+
+
+
+
+
+
+
+
+</body>
+</html>
