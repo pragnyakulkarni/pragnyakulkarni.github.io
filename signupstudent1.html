@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+        <meta charset="UTF-8" />
+         <title>SignUp Form </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="SignUp Form "/>
+        <link rel="stylesheet" type="text/css" href="loginsignup.css" />
+		
+		 <script type="text/javascript">
+        
+		function validate_form() {
+         if (!(/^[A-Za-z]+$/).test(document.register.usernamesignup.value)) 
+      {
+       alert('Please enter valid name only');
+      return false;
+      }
+            
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.register.emailsignup.value)) {
+                alert("You have entered an invalid email address!")
+                return (false);
+            }
+			
+	    var password = document.getElementById("passwordsignup").value;
+        var confirmPassword = document.getElementById("passwordsignup_confirm").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+		}
+		
+		if (password.length < 4) {
+        alert(" Password too_short");
+        return false;
+    } else if (password.length > 10) {
+        alert("Password too_long");
+        return false;
+    } else if (password.search(/\d/) == -1) {
+        alert(" Password should contain atleast 1 number");
+        return false;
+    } else if (password.search(/[a-zA-Z]/) == -1) {
+        alert(" Password should contain atleast 1 character");
+        return false;
+    }
+		   }
+ 
+ 
+      
+    </script>
+		
+        
+ 
+       
+    </head>
+    <body>
+	    
+        <section>
+		
+            <div id="wrapper">			
+                
+				           
+                            <form name="register" action="php/signupstudent.php" onsubmit="return validate_form()"  style="margin-top:50px" method="POST">
+                                 <div class="inset">							
+                                <h1> Sign up </h1> 
+								
+				              <div class="container">
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u">Name</label>
+                                    <input id="usernamesignup" name="usernamesignup"  type="text" placeholder="aman" required />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" >EmailId</label>
+                                    <input id="emailsignup" name="emailsignup" type="email" placeholder="mysupermail@mail.com" required/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Password </label>
+                                    <input id="passwordsignup" name="passwordsignup"  type="password" placeholder="eg. X8df!90EO" required/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" required/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit"  value="Sign up" name="submit" onclick="return validate_form()" /> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="loginstudent.html"> Go and log in </a>
+								</p>
+                            </form>
+                </div>
+				</div>
+			</div>
+			
+						
+                    
+                
+        </section>
+		
+</body>
+</html>

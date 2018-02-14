@@ -1,0 +1,93 @@
+#wrapper{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;	
+	margin: 0px auto;	
+	width: 500px;
+	position: relative;
+    	
+}
+
+#wrapper h1{
+	font-size: 48px;
+	padding: 1px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+/** For the moment only webkit supports the background-clip:text; */
+
+#wrapper p{
+	margin-bottom:12px;
+}
+#wrapper p:first-child{
+	margin: 0px;
+	margin-top:-40px;
+}
+
+::-webkit-input-placeholder  { 
+	color: rgb(190, 188, 188); 
+	font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ 
+	color: rgb(190, 188, 188);
+	font-style: italic;
+} 
+input {
+  outline: none;
+}
+
+
+/* all the input except submit and checkbox */
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	
+}
+
+
+/*styling both submit buttons */
+#wrapper p.button input{
+	width: 30%;
+	cursor: pointer;	
+	background: black;
+	padding: 8px 5px;
+	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+	color: #fff;
+	font-size: 24px;	
+	border: 1px solid rgb(28, 108, 122);	
+	margin-bottom: 10px;	
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	
+}
+#wrapper p.button input:hover{
+	background: red;
+}
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+	background: red;
+	position: relative;
+	top: 1px;
+	border: 1px solid rgb(12, 76, 87);	
+	
+}
+p.reservation.button{
+	text-align: right;
+	margin: 5px 0;
+}
+
+.inset{
+	
+	border: 1px solid black;
+    outline-color:red;
+	outline-style: inset;
+	
+
+}
+.container{
+	padding:12px;
+
+}

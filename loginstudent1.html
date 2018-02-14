@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+         <meta charset="UTF-8" />
+		<title>Login Form </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login Form "/>
+        <link rel="stylesheet" type="text/css" href="loginsignup.css" />
+		<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "gethint.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+    </head>
+    <body>
+	    
+        <section>				
+                
+                
+                    <div id="wrapper">
+                        
+						
+                            <form class="signin-form" action="php/loginstudent.php" method="post" style="margin-top:80px">
+							<div class="inset">
+                                <h1>Log in</h1>
+								
+								
+								<div class="container">
+								    Name: <input type="text" onkeyup="showHint(this.value)">
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Your email</label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">Keep me logged in</label>
+								</p>
+                                <p class="login button"> 
+                                    <input id="signin" type="submit" name="login" value="Login" /> 
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="signupstudent.html" class="to_register">Join us</a>
+								</p>
+					
+                        </div>
+			
+						</div>
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+                </div>        
+                
+        </section>
+    </body>
+</html>
